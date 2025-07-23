@@ -141,6 +141,32 @@ padding: 1% 1%;
   text-align: center;
   font-family: artifika, sans-serif;
 }
-
-
-
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: calc(3 * 400px + 2 * 20px);
+    margin: 0 auto;
+}
+.blog_cards{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.blog_photo{
+    width: 100%;
+    height: 70vh; 
+    max-width: 400px;       
+    overflow: hidden;
+    position: relative;
+}
+.blog_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+    display: block;
+}
