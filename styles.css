@@ -68,10 +68,17 @@ h1 span{
     border: none;
     outline: none;
 }
+#Design{
+    background: #d6c6b4;
+    padding: 50px 0;
+}
 .design_uptitle {
   text-align: center;
   margin: 20px 0;
   color: #000;
+  font-family: oswald, sans-serif;
+  color: #332211;
+  font-size: 2rem;
 }
 /* Kontener kart jako responsywny grid */
 .designs {
@@ -101,6 +108,7 @@ h1 span{
 .design_photo {
   aspect-ratio: 1 / 1;     /* wymusza kształt kwadratu */
   overflow: hidden;        /* przycina obrazek do kwadratu */
+  position: relative;
 }
 
 /* Sam obrazek */
@@ -110,6 +118,20 @@ h1 span{
   object-fit: cover;       /* wypełnia cały kwadrat bez zniekształceń */
   display: block;
 }
+.fa-regular.fa-heart {
+font-size: 1rem;
+color: #fff;
+background-color: #000;
+position: absolute;
+top: 10px;
+left: 10px;
+border: 2px solid #000;;
+border-radius: 20%;
+padding: 1% 1%;
+}
+.hearth_count{
+    margin-left: 5px;
+}
 
 /* Tekst w karcie */
 .design-subtitle {
@@ -117,6 +139,7 @@ h1 span{
   font-size: 1rem;
   color: #333;
   text-align: center;
+  font-family: artifika, sans-serif;
 }
 
 
