@@ -28,6 +28,7 @@ nav ul{
 }
  li, a{
     list-style: none;
+    font-family: sans-serif;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
@@ -133,14 +134,31 @@ padding: 1% 1%;
     margin-left: 5px;
 }
 
-/* Tekst w karcie */
+
 .design-subtitle {
   margin: 10px;
   font-size: 1rem;
   color: #333;
   text-align: center;
-  font-family: artifika, sans-serif;
+  font-family: sans-serif;
 }
+.blog_header{
+    text-align: center;
+    margin: 20px 0;
+    color: #000;
+    font-family: oswald, sans-serif;
+}
+.blog_title{
+    font-size: 2rem;
+    color: #D2691E;
+}
+.blog_subtitle{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: #D2691E;
+    margin-bottom: 20px;
+}
+
 .blogs{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -163,10 +181,85 @@ padding: 1% 1%;
     max-width: 400px;       
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 .blog_photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;       
     display: block;
+}
+.blog_subtitles{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.subtitle_blog1, .subtitle_blog3{
+    font-size: 1rem;
+    color: lightslategray;
+}
+.subtitle_blog2{
+    font-size: 1.5rem;
+    font-family: oswald, sans-serif;
+    color: #D2691E;
+    font-weight: 500;
+}
+
+.blog_button{
+    width: 50%;
+    height: 5vh;
+    background-color: #3b3b3b;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.blog_button:hover{
+    background-color: #2a2a2a;
+}
+#About{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.about_photo{
+    flex: 1;
+    height: 80vh;
+    object-fit: cover;
+    padding: 20px;
+}
+.right_about{
+    flex: 1;
+    height: 80vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about_header1, .about_header2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: oswald, sans-serif;
+    color: #D2691E;
+}
+.about_header1{
+    font-size: 2rem;
+}
+.about_header2{
+    font-size: 1.5rem;
+}
+.about_text1, .about_text2, .about_text3{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.5;
 }
