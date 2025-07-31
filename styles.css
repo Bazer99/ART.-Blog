@@ -295,3 +295,23 @@ padding: 1% 1%;
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
+/* Małe telefony — bardzo wąskie ekrany (np. starsze modele) */
+@media (max-width: 320px) {
+  /* style dla bardzo małych ekranów */
+}
+
+/* Standardowe smartfony — większość telefonów Android i iPhone (np. iPhone 6-14) */
+@media (max-width: 375px) {
+  /* style dla popularnych smartfonów */
+}
+
+/* Duże smartfony — np. iPhone Pro Max, Samsung Galaxy S Ultra */
+@media (max-width: 414px) {
+  /* style dla dużych telefonów */
+}
+
+/* Ogólnie dla wszystkich telefonów (opcjonalne) */
+@media (max-width: 480px) {
+  /* style na wszystkie telefony mobilne */
+}
