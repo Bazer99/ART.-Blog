@@ -3,9 +3,27 @@
     margin: 0;
     padding: 0;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
 #home{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 nav{
     width: 100%;
@@ -26,6 +44,12 @@ nav ul{
     display: flex;
     gap: 50px;
     
+}
+.nav-link{
+    display: inline;
+}
+.nav-icon{
+    display: none;
 }
  li, a{
     list-style: none;
@@ -224,12 +248,13 @@ padding: 1% 1%;
 }
 #About{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 50px;
+    padding-bottom: 80px;
 }
 .about_photo{
     flex: 1;
@@ -296,22 +321,23 @@ padding: 1% 1%;
     cursor: pointer;
 }
 
-/* Małe telefony — bardzo wąskie ekrany (np. starsze modele) */
-@media (max-width: 320px) {
-  /* style dla bardzo małych ekranów */
-}
-
-/* Standardowe smartfony — większość telefonów Android i iPhone (np. iPhone 6-14) */
-@media (max-width: 375px) {
-  /* style dla popularnych smartfonów */
-}
-
-/* Duże smartfony — np. iPhone Pro Max, Samsung Galaxy S Ultra */
 @media (max-width: 414px) {
-  /* style dla dużych telefonów */
+  .nav-link {
+    display: none; /* ukrywamy tekst */
+  }
+  .nav-icon {
+    display: inline; /* pokazujemy ikony */
+    font-size: 1.2rem; /* dostosuj rozmiar ikony */
+  }
+
+  /* Opcjonalnie: wyśrodkowanie i odstępy */
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-/* Ogólnie dla wszystkich telefonów (opcjonalne) */
-@media (max-width: 480px) {
-  /* style na wszystkie telefony mobilne */
-}
