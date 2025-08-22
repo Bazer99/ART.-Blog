@@ -21,7 +21,7 @@ body {
 }
 
 
-#home{
+#Home{
     width: 100%;
     flex: 1;
 }
@@ -46,10 +46,10 @@ nav ul{
     
 }
 .nav-link{
-    display: inline;
+    display: none !important;
 }
 .nav-icon{
-    display: none;
+    display: inline !important;
 }
  li, a{
     list-style: none;
@@ -247,6 +247,8 @@ padding: 1% 1%;
     background-color: #2a2a2a;
 }
 #About{
+    height: auto;
+    min-height: 80vh;
     width: 100%;
     flex: 1;
     display: flex;
@@ -254,7 +256,7 @@ padding: 1% 1%;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 20vh;
 }
 .about_photo{
     flex: 1;
@@ -321,24 +323,119 @@ padding: 1% 1%;
     transition: all 0.3s ease;
     cursor: pointer;
 }
-
-@media (max-width: 414px) {
+@media (min-width: 1025px) {
   .nav-link {
-    display: none; /* ukrywamy tekst */
-  }
-  .nav-icon {
-    display: inline; /* pokazujemy ikony */
-    font-size: 1.2rem; /* dostosuj rozmiar ikony */
+    display: inline !important;
   }
 
-  /* Opcjonalnie: wyśrodkowanie i odstępy */
-  .nav-links li {
+  .nav-icon {
+    display: none !important;
+  }
+}
+/* Małe ekrany – zmniejszamy logo i padding w nav */
+@media (max-width: 1024px) {
+  nav {
+    padding: 20px; /* zmniejszony padding, żeby elementy się zmieściły */
+  }
+
+  nav .logo {
+    font-size: 1.5rem; /* mniejszy rozmiar logo */
+    white-space: nowrap; /* zapobiega łamaniu tekstu w kolumnę */
+  }
+
+  nav ul {
+    gap: 15px; /* zmniejszenie odstępów między linkami */
+  }
+}
+@media (max-width: 1024px) {
+  .home_article {
+    height: 90vh;     /* nadal pełny ekran */
+    gap: 15px;
+    padding: 0 15px;  /* mniejsze marginesy */
+  }
+
+  .home_article h1 {
+    font-size: 2rem;
     text-align: center;
   }
 
-  .nav-links a {
-    display: flex;
-    justify-content: center;
+  .home_article p {
+    font-size: 1rem;
+    text-align: center;
   }
 }
+
+@media (max-width: 1024px) {
+  .designs {
+    grid-template-columns: 1fr;  /* jedna kolumna */
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .design_cards {
+    height: auto;                /* usuwa sztywną wysokość jeśli była */
+  }
+
+  .design_photo img {
+    width: 100%;
+    height: auto;                /* proporcjonalne skalowanie obrazków */
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1024px) {
+  #About {
+    height: auto;          /* pozwala rosnąć naturalnie */
+    padding-bottom: 20vh;  /* zostawia miejsce dla footer */
+  }
+
+  .about_photo,
+  .right_about {
+    height: auto;           /* usuń sztywne 80vh */
+  }
+
+  .right_about {
+    gap: 15px;              /* trochę mniejszy gap dla ciasnych ekranów */
+  }
+}
+@media (max-width: 1024px) {
+  .blog_photo {
+    width: 100%;
+    height: auto;           /* usuwa sztywne 70vh */
+  }
+
+  .blog_photo img {
+    width: 100%;
+    height: auto;           /* proporcjonalne skalowanie */
+    object-fit: contain;    /* całe zdjęcie widoczne */
+  }
+
+  .blogs {
+    grid-template-columns: 1fr; /* jedna kolumna na małych ekranach */
+    gap: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about_photo,
+  .right_about {
+    height: auto;        /* pozwala rosnąć naturalnie */
+    width: 100%;         /* zajmuje pełną szerokość */
+    padding: 10px;
+  }
+
+  #About {
+    flex-direction: column;  /* zdjęcie nad tekstem */
+    align-items: center;
+  }
+
+  .about_photo img {
+    width: 100%;
+    height: auto;           /* proporcjonalne skalowanie */
+    object-fit: contain;    /* całe zdjęcie widoczne */
+  }
+}
+
+
 
